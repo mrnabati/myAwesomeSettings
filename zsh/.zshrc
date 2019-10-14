@@ -8,8 +8,9 @@ export ZSH="/Users/Ramin/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-#ZSH_THEME="powerlevel9k"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -71,13 +72,18 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    zsh-syntax-highlighting
+#    zsh-syntax-highlighting
     vscode
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv host dir)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs ssh)
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_STRATEGY=truncate_folders
+POWERLEVEL9K_SHORTEN_DELIMITER=""
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -103,3 +109,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # ------------------------------------------------------------------------------
+
+alias ta="tmux a -t"
+alias tn="tmux new -s"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
