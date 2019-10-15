@@ -26,6 +26,27 @@
     # change default shell
     chsh -s /usr/local/bin/zsh
     ```
+
+- `Note:` To install the latest version of zsh on Linux, follow these steps:
+
+    1. Download and install the latest version
+        ```zsh
+        wget -O zsh.tar.xz https://sourceforge.net/projects/zsh/files/latest/download
+        tar xf zsh.tar.xz
+        cd zsh
+        ./configure && make && sudo make install
+        ```
+    1. This will install `zsh` to `/usr/local/bin/zsh`, and you can check the version using the command below:
+        ```bash
+        $ /usr/local/bin/zsh --version
+        ```
+    1. If you want to use it as your login shell, you’ll need to add it to `/etc/shells`:
+        ```bash
+        echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
+        chsh -s /usr/local/bin/zsh
+        ```
+    1. Log out and back in again to activate the newly installed version.
+
 ---
 ## Configuration
 
@@ -41,13 +62,16 @@
     ```
 
 - Set `ZSH_THEME=powerlevel10k/powerlevel10k` in your `~/.zshrc`
-
-- Copy the [p10k.zsh](./.p10k.zsh) file to your home directory:
-
-- Add the following line to the end of `~/.zshrc` file:
-    ```zsh
-    [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+- Download the `zsh-syntax-highlighting` plugin:
+    ```bash
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     ```
+
+- Activate the plugin in `~/.zshrc`:
+    ```bash
+    plugins=( [plugins...] zsh-syntax-highlighting)
+    ```
+
 - Source the `~/.zshrc` file:
     ```zsh
     source ~/.zshrc
@@ -69,7 +93,7 @@
      - [MesloLGS NF Italic.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Italic.ttf)
      - [MesloLGS NF Bold Italic.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold%20Italic.ttf)
   
-  1. In `~/.p10k.zsh`, change the following line:
+  3. In `~/.p10k.zsh`, change the following line:
         ```zsh
         typeset -g POWERLEVEL9K_MODE=powerline
         ```
@@ -79,7 +103,7 @@
         typeset -g POWERLEVEL9K_MODE=nerdfont-complete
         ```
   
-  1. In Iterm2/Terminal, under `Preferences->Profile->Text`, change the font to `MesloLGS NF`. 
+  4. In Iterm2/Terminal, under `Preferences->Profile->Text`, change the font to `MesloLGS NF`. 
 
 ---
 - If using the `zsh-syntax-highlighting` and want to disable underlining text:

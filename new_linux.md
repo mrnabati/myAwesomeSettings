@@ -1,8 +1,8 @@
-# Setup for a new linux machine
-Switching to a new linux-based machine (Ubuntu, CentOS, MacOS) has never been easier!
+# My Setup For A New Linux Machine
+Switching to a new linux-based machine (Ubuntu, CentOS, MacOS) can be challenging. Here I go over my basic setup to get you up and running quickly.
 
 
-## Update packages
+## Update/Install Package Manger
 
 ```bash
 ## Ubuntu
@@ -20,7 +20,7 @@ sudo yum update
 
 
 ## Git
-- Install
+- ### Installation
     ```bash
     ## Ubuntu
     sudo apt install git
@@ -31,17 +31,20 @@ sudo yum update
     ## MacOS
     brew install git
     ```
-- Setup
+- ### Configuration
     ```bash
-    git config --global user.name "Ramin Nabati"
-    git config --global user.email "ramin.nabati@gmail.com"
+    git config --global user.name "First Last"
+    git config --global user.email "first.last@gmail.com"
     ```
 
     Then generate private/public key pair and upload the public key to github.
 
 
 ## Zsh
-- Install
+
+If you prefer bash, you can skip this one.
+
+- ### Installation
     ```bash
     ## Ubuntu
     sudo apt instal zsh
@@ -62,12 +65,9 @@ sudo yum update
     chsh -s /usr/local/bin/zsh
     ```
 
-- Setup
+- ### Configuretion
 
-    Download and install oh-my-zsh
-    ```bash
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    ```
+    Refer to [zsh configuration](./zsh/README.md).
 
 
 ## Python 3
@@ -80,10 +80,33 @@ sudo python3 get-pip.py
 sudo pip3 install numpy flake8
 ```
 
+## Virtualenv
+
+1. Install virtualenv and virtualenvwrapper
+    ```bash
+    python3.7 -m pip install virtualenv virtualenvwrapper
+    ```
+1. Add the following files to `~/.bashrc` , `~/.bash_profile` or `~/.zshrc` to setup the virtualenv and projects directory.
+ Change the path to python3.7 if in a different path.
+    ```zsh
+    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/projects
+    source /usr/local/bin/virtualenvwrapper.sh
+    ```
+1. Reload the `~/.bashrc`, `~/.bash_profile` or `~/.zshrc` file
+    ```zsh
+    source ~/.bashrc
+    # or
+    source ~/.bash_profile
+    # or
+    source ~/.zshrc
+
+    ```
 
 ## Tmux
 
-- Install
+- ### Installation
     ```bash
     ## Ubuntu
     sudo apt instal tmux
@@ -96,16 +119,10 @@ sudo pip3 install numpy flake8
     ```
     *Note*: To install the latest version for CentOS, [follow this](./tmux/README.md).
 
-- Setup
-  Follow the instructions [here](./tmux/README.md) to setup the dotfiles.
+- ### Configuration
+  
+  Follow the instructions [here](./tmux/README.md).
 
-
-## Other Usefull Softwares
-
-```bash
-## Ubuntu
-sudo apt-get install htop
-```
 
 
 ## SSH access
@@ -137,3 +154,11 @@ sudo apt-get install htop
     ```bash
     cat id_rsa.pub >> ~/.ssh/authorized_keys
     ```
+
+---
+## Other Usefull Softwares
+
+```bash
+## Ubuntu
+sudo apt-get install htop
+```
