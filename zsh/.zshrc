@@ -7,6 +7,7 @@ export ZSH="/Users/Ramin/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -73,6 +74,7 @@ plugins=(
     git
     zsh-syntax-highlighting
     vscode
+    tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -112,18 +114,4 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 # ------------------------------------------------------------------------------
 
 ## Aliases
-alias getInfo="python3 /Users/Ramin/Documents/PhD/repositories/awesomeCAVs/arxivParser/arxivLinkParser.py"
-alias arxivPdf="python3 /Users/Ramin/Documents/PhD/repositories/arxiv-latex-cleaner/arxiv_latex_cleaner.py --compress_pdf"
-alias ta="tmux a -t"
-alias tn="tmux new -s"
 
-## virtualenvwrapper settings
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Documents/PhD/projects
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
-source /Users/Ramin/Applications/anaconda3/bin/virtualenvwrapper.sh
-source ~/p10k-lean.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
