@@ -69,7 +69,7 @@
      - [MesloLGS NF Italic.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Italic.ttf)
      - [MesloLGS NF Bold Italic.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold%20Italic.ttf)
   
-  3. In `~/.p10k.zsh`, change the following line:
+  1. In `~/.p10k.zsh`, change the following line:
         ```zsh
         typeset -g POWERLEVEL9K_MODE=powerline
         ```
@@ -78,7 +78,10 @@
         ```zsh
         typeset -g POWERLEVEL9K_MODE=nerdfont-complete
         ```
+  
+  1. In Iterm2/Terminal, under `Preferences->Profile->Text`, change the font to `MesloLGS NF`. 
 
+---
 - If using the `zsh-syntax-highlighting` and want to disable underlining text:
     ```zsh
     ZSH_HIGHLIGHT_STYLES[path]=none
