@@ -7,3 +7,4 @@ This repository includes all my personalized (and awesome!) configs, snippets an
 -  [Zsh shell settings](./zsh/README.md)
 -  [Vim settings](./vim/README.md)
 -  [Tmux settings](./tmux/README.md)
+-  [VSCode settings](./vscode/README.md)

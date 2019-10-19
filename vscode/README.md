@@ -48,4 +48,9 @@
     ```zsh
     code --list-extensions | xargs -L 1 echo code --install-extension >> vscode_extensions.list
     ```
-    Then you can easuly run `vscode_extensions.list` on another computer to install the same extensions.
+
+- To install VSCode extensions saved in a file as shown above:
+    ```zsh
+    chmod u+x vscode_extensions.list
+    ./vscode_extensions.list
+    ```
