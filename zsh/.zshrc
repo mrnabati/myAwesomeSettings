@@ -3,10 +3,6 @@
 # http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
 # https://nerdfonts.com
 
-#################################################
-#---------------- Exports ----------------------#
-#################################################
-export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
 #################################################
@@ -14,30 +10,44 @@ export ZSH="$HOME/.oh-my-zsh"
 #################################################
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# To change powerlevel10k theme settings, edit ~/.p10k.zsh
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 #################################################
 #----------------- Plugins ---------------------#
 #################################################
-plugins=(
-    git
-    zsh-syntax-highlighting
-    vscode
-    tmux
-    colored-man-pages
-    osx
-)
-ZSH_HIGHLIGHT_STYLES[path]=none
-ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+plugins=(git zsh-syntax-highlighting vscode tmux)
+plugins+=(colored-man-pages osx pip history)
+
+source $ZSH/oh-my-zsh.sh
+
+## Plugin settings (should come after sourceing oh-my-zsh.sh)
+ZSH_HIGHLIGHT_STYLES[path]='none'
+ZSH_HIGHLIGHT_STYLES[path_prefix]='none'
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+
+#################################################
+#-------------- Custom Functions ---------------#
+#################################################
+
+# Create a new directory and enter it
+function mkd() {
+	mkdir -p "$@" && cd "$_";
+}
+
+# Preview a markdown file in terminal
+function mdt() {
+    markdown "$*" | lynx -stdin
+}
 
 #################################################
 #---------------- Aliases ----------------------#
 #################################################
 
 
-##------------------------------------------------------------------------------
-source $ZSH/oh-my-zsh.sh
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+#################################################
+#---------------- Exports ----------------------#
+#################################################
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 

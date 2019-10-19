@@ -67,7 +67,7 @@ If you prefer bash, you can skip this one.
 
 - ### Configuretion
 
-    Refer to [zsh configuration](./zsh/README.md).
+    Follow the instructions in [zsh configuration](./zsh/README.md).
 
 
 ## Python 3
@@ -121,7 +121,7 @@ sudo pip3 install numpy flake8
 
 - ### Configuration
   
-  Follow the instructions [here](./tmux/README.md).
+  Follow the instructions in [tmux configuration](./tmux/README.md).
 
 
 

@@ -4,7 +4,7 @@
 
 - ### Ubuntu
     ```zsh
-    sudo apt instal zsh
+    sudo apt install zsh
     ```
 
 - ### CentOS
@@ -27,7 +27,8 @@
     chsh -s /usr/local/bin/zsh
     ```
 
-- `Note:` To install the latest version of zsh on Linux, follow these steps:
+- ### *Note:* 
+  To install the latest version of zsh on Linux, follow these steps:
 
     1. Download and install the latest version
         ```zsh
@@ -36,16 +37,16 @@
         cd zsh
         ./configure && make && sudo make install
         ```
-    1. This will install `zsh` to `/usr/local/bin/zsh`, and you can check the version using the command below:
+    2. This will install `zsh` to `/usr/local/bin/zsh`, and you can check the version using the command below:
         ```bash
         $ /usr/local/bin/zsh --version
         ```
-    1. If you want to use it as your login shell, you’ll need to add it to `/etc/shells`:
+    3. If you want to use it as your login shell, you’ll need to add it to `/etc/shells`:
         ```bash
         echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
         chsh -s /usr/local/bin/zsh
         ```
-    1. Log out and back in again to activate the newly installed version.
+    4. Log out and back in again to activate the newly installed version.
 
 ---
 ## Configuration
@@ -82,11 +83,11 @@
 - If OS icons do not show correctly at prompt, follow these steps:
   
   1. Install the Nerd Fonts:
-    ```zsh
-    ## MacOS
-    brew tap homebrew/cask-fonts
-    brew cask install font-hack-nerd-font
-    ```
+        ```zsh
+        ## MacOS
+        brew tap homebrew/cask-fonts
+        brew cask install font-hack-nerd-font
+        ```
   2. Install the following Meslo Nerd Fonts:
      - [MesloLGS NF Regular.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf)
      - [MesloLGS NF Bold.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold.ttf)

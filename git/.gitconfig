@@ -1,0 +1,42 @@
+[user]
+	name = Ramin Nabati
+	email = ***
+
+[push]
+	default = matching
+
+[core]
+	excludesfile = ~/.gitignore
+	editor = /usr/bin/vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	whitespace = cr-at-eol
+
+[alias]
+    logs  = log --graph --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
+
+[color]
+    ui = always
+
+[color "diff"]
+	meta = yellow bold
+	commit = green bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = "red bold 52"
+    newNormal = "green bold"
+    newHighlight = "green bold 22"
+
+[color "branch"]
+	current = yellow reverse
+  	local = yellow
+  	remote = green
+
+[color "status"]
+  	added = green
+  	changed = yellow
+  	untracked = red
