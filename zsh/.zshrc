@@ -26,6 +26,9 @@ ZSH_HIGHLIGHT_STYLES[path]='none'
 ZSH_HIGHLIGHT_STYLES[path_prefix]='none'
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
+## Other ZSH settings
+unsetopt share_history      # Do not share history between shells
+
 #################################################
 #-------------- Custom Functions ---------------#
 #################################################
