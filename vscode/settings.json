@@ -1,0 +1,145 @@
+{   "editor.parameterHints": false,
+    "python.linting.pylintArgs": ["--generate-members"],
+    "python.terminal.activateEnvironment": false,
+
+    // Theme Settings ----------------------------------------------------------
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "workbench.colorCustomizations": {
+        "editor.selectionHighlightBackground": "#114404f1",
+        "editor.selectionBackground": "#30771ff1",
+        "editor.findMatchBackground": "#40b1dd7c",
+        "editor.findMatchHighlightBackground": "#1d4c5f",
+        "editor.findRangeHighlightBackground": "#e2d4d4",
+        "editor.background":"#141414",
+    },
+    "editor.tokenColorCustomizations": {
+        "[Material Theme Darker High Contrast]": {
+            
+            "textMateRules":[
+                {
+                  "scope": ["comment", 
+                            "string.quoted.docstring.multi.python", 
+                            "punctuation.definition.comment"],
+                  "settings":{
+                    "foreground": "#30e26c"
+                  }
+                }
+              ]
+        }
+    },
+    
+    // LaTeX Settings ----------------------------------------------------------
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "--shell-escape", // added arg to default
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "--shell-escape", // added arg to default
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "lualatex",
+            "command": "lualatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {"name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
+         "tools": [
+            "pdflatex",
+            "bibtex",
+            "pdflatex",
+            "pdflatex"]},
+        {"name": "pdflatex->bibtex->pdflatex",
+         "tools": [
+            "pdflatex",
+            "bibtex",
+            "pdflatex"]},
+        {"name": "lualatex->biber->lualatex",
+         "tools": [
+            "lualatex",
+            "biber",
+            "lualatex"]},
+        {"name": "lualatex->bibtex->lualatex",
+         "tools": [
+            "lualatex",
+            "bibtex",
+            "lualatex"]},
+        {"name": "lualatex",
+         "tools": [
+            "lualatex"]},
+        {"name": "latexmk",
+         "tools": [
+            "latexmk"]}
+    ],
+    "latex-workshop.latex.clean.enabled": true,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.autoBuild.onSave.enabled": true,
+    "extensions.autoUpdate": false,
+    "commentAnchors.workspace.lazyLoad": true,
+    "editor.rulers": [
+        80
+    ],
+    "markdownlint.customRules": [
+        "{docsmsft.docs-markdown}/markdownlint-custom-rules/rules.js"
+    ],
+    "[markdown]": {},
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    // "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.message.update.show": false,
+    "[matlab]": {},
+    "C_Cpp.updateChannel": "Insiders",
+    "gitlens.views.repositories.files.layout": "list",
+    "window.zoomLevel": 0,
+    "git.ignoreLegacyWarning": true,
+    "gitlens.advanced.messages": {
+        "suppressGitVersionWarning": true
+    },
+    "sync.gist": "95d7ede393f1e1e05b0a84d4af3cf739",
+
+    // Terminal Settings -------------------------------------------------------
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.enableBold": true,
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.rightClickCopyPaste": true,
+    "workbench.iconTheme": "material-icon-theme",
+}
