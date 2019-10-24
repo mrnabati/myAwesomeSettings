@@ -77,7 +77,9 @@ If you prefer bash, you can skip this one.
 sudo apt install python3-dev python-dev
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
-sudo pip3 install numpy flake8
+
+## MacOS
+brew install python3
 ```
 
 ## Virtualenv
@@ -89,12 +91,11 @@ sudo pip3 install numpy flake8
 1. Add the following files to `~/.bashrc` , `~/.bash_profile` or `~/.zshrc` to setup the virtualenv and projects directory.
  Change the path to python3.7 if in a different path.
     ```zsh
-    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
     export WORKON_HOME=$HOME/.virtualenvs
     export PROJECT_HOME=$HOME/projects
     source /usr/local/bin/virtualenvwrapper.sh
     ```
-1. Reload the `~/.bashrc`, `~/.bash_profile` or `~/.zshrc` file
+2. Reload the `~/.bashrc`, `~/.bash_profile` or `~/.zshrc` file
     ```zsh
     source ~/.bashrc
     # or
