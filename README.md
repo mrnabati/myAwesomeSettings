@@ -9,3 +9,4 @@ This repository includes all my personalized (and awesome!) configs, snippets an
 -  [Vim settings](./vim/README.md)
 -  [Tmux settings](./tmux/README.md)
 -  [VSCode settings](./vscode/README.md)
+-  [Python Setup](python/README.md)
