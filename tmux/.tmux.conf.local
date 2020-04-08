@@ -287,9 +287,10 @@ unbind C-a
 # move status line to top
 set -g status-position top
 
-# split window vertically by |
+# split window vertically by | and horizontally by -
 unbind _
 bind | split-window -h
+bind - split-window -v
 
 # ask for window name when creating a new one
 bind-key c command-prompt -p "window name:" "new-window; rename-window '%%'"
