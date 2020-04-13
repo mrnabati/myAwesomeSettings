@@ -1,7 +1,9 @@
 {   "editor.parameterHints": false,
     "python.linting.pylintArgs": ["--generate-members"],
+    "python.venvPath":"/Users/Ramin/.virtualenvs",
     "python.terminal.activateEnvironment": false,
 
+    "gitlens.mode.active": "zen",
     // Theme Settings ----------------------------------------------------------
     "workbench.colorTheme": "Material Theme Darker High Contrast",
     "workbench.colorCustomizations": {
@@ -11,6 +13,32 @@
         "editor.findMatchHighlightBackground": "#1d4c5f",
         "editor.findRangeHighlightBackground": "#e2d4d4",
         "editor.background":"#141414",
+        // "editorSuggestWidget.background": "",// widget bg
+        "editorSuggestWidget.selectedBackground": "#06696d",// <-- this one -->
+        // "editorSuggestWidget.highlightForeground": "#ff6a00",// typed(matching) symbols color
+        "list.highlightForeground":"#165214",
+        // "list.activeSelectionBackground":"",
+        // "list.activeSelectionForeground":"",
+        // "list.dropBackground":"",
+        // "list.focusBackground":"",
+        // "list.focusForeground":"",
+        // "list.highlightForeground":"",
+        "list.hoverBackground": "#06696d",
+        // "list.hoverForeground": "",
+        // "list.inactiveSelectionBackground": "",
+        // "list.inactiveSelectionForeground": "",
+        // "list.inactiveFocusBackground": "",
+        // "list.invalidItemForeground": "",
+        // "list.deemphasizedForeground": "",
+        // "tree.indentGuidesStroke": "",
+        // "list.errorForeground": "",
+        // "list.warningForeground": "",
+        // "listFilterWidget.background": "",
+        // "listFilterWidget.outline": "",
+        // "listFilterWidget.noMatchesOutline": "",
+        // "list.filterMatchBackground": "",
+        // "list.filterMatchBorder": "",
+
     },
     "editor.tokenColorCustomizations": {
         "[Material Theme Darker High Contrast]": {
@@ -80,6 +108,10 @@
         }
     ],
     "latex-workshop.latex.recipes": [
+        {"name": "pdflatex",
+            "tools": [
+               "pdflatex",
+               ]},
         {"name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
          "tools": [
             "pdflatex",
@@ -119,7 +151,7 @@
     ],
     "[markdown]": {},
     "latex-workshop.latex.autoClean.run": "onBuilt",
-    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.autoBuild.run": "never", //"onFileChange",
     "latex-workshop.message.update.show": false,
     "[matlab]": {},
     "C_Cpp.updateChannel": "Insiders",
@@ -127,9 +159,11 @@
     "window.zoomLevel": 0,
     "git.ignoreLegacyWarning": true,
     "gitlens.advanced.messages": {
-        "suppressGitVersionWarning": true
+        "suppressGitVersionWarning": true,
+        "suppressLineUncommittedWarning": true
     },
     "sync.gist": "95d7ede393f1e1e05b0a84d4af3cf739",
+    "latex-workshop.message.badbox.show": false,
 
     // Terminal Settings -------------------------------------------------------
     "terminal.external.osxExec": "iTerm.app",
@@ -139,4 +173,48 @@
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.rightClickCopyPaste": true,
     "workbench.iconTheme": "material-icon-theme",
+    "editor.minimap.enabled": false,
+    "cSpell.userWords": [
+        "voxel",
+        "voxels"
+    ],
+    "python.pythonPath": "/usr/local/bin/python3",
+    "todo-tree.highlights.enabled": true,
+    "vsicons.dontShowNewVersionMessage": true,
+
+    // Gitlens
+    "gitlens.currentLine.scrollable": false,
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "git-commit",
+        "go",
+        "handlebars",
+        "haskell",
+        "html",
+        "jade",
+        "java",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "jsonc",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "python",
+        "pug",
+        "restructuredtext",
+        "rust",
+        "scala",
+        "scss",
+        "text",
+        "typescript"
+    ],
+    "todo-tree.tree.showScanModeButton": false,
+    "[cpp]": {},
 }
