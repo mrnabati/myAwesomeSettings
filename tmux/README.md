@@ -18,21 +18,30 @@
     1. tmux has a library dependency on `libevent` which, of course, isn’t installed by default:
 
         ```zsh
-        wget https://github.com/downloads/libevent/libevent/libevent-2.0.21-stable.tar.gz
-        tar xzvf libevent-2.0.21-stable.tar.gz
-        cd libevent-2.0.21-stable
+        wget https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz
+        tar xzvf libevent-2.1.12-stable.tar.gz
+        cd libevent-2.1.12-stable
         ./configure && make
         sudo make install
         ```
 
-    2. To build and install tmux from a release tarball, use:
+    2. Extract the tar file:
 
         ```zsh
-        wget https://github.com/tmux/tmux/releases/download/2.4/tmux-2.4.tar.gz
-        tar xzf tmux-2.4.tar.gz
-        cd tmux-2.4
+        wget https://github.com/tmux/tmux/releases/download/3.1b/tmux-3.1b.tar.gz
+        tar xzf tmux-3.1b.tar.gz
+        cd tmux-3.1b
+        ```
+    3. To install globally for all users:
+        ```
         ./configure && make
         sudo make install
+        ```
+        or install locally for the current user:
+        ```zsh
+        ./configure --prefix=$HOME/.local)
+        make
+        make install
         ```
 
     *Tips*:
