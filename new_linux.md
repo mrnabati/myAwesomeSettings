@@ -18,7 +18,18 @@ sudo yum update
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-
+## vim
+- ### Installation
+    ```bash
+    ## MacOS
+    brew install vim
+    ```
+- ### Configuration:
+    - Install Vundle:
+        ```bash
+        git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+        ```
+    - 
 ## Git
 - ### Installation
     ```bash
@@ -32,12 +43,11 @@ sudo yum update
     brew install git
     ```
 - ### Configuration
+    - Install the Ultimate Vimrc Configuration:
     ```bash
-    git config --global user.name "First Last"
-    git config --global user.email "first.last@gmail.com"
+    git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+    sh ~/.vim_runtime/install_awesome_vimrc.sh
     ```
-
-    Then generate private/public key pair and upload the public key to github.
 
 
 ## Zsh
@@ -106,7 +116,7 @@ pyenv global 3.7.7
     ```zsh
     export WORKON_HOME=$HOME/.virtualenvs
     export PROJECT_HOME=$HOME/projects
-    source /usr/local/bin/virtualenvwrapper.sh
+    source ~/.pyenv/versions/3.7.7/bin/virtualenvwrapper.sh
     ```
 2. Reload the `~/.bashrc`, `~/.bash_profile` or `~/.zshrc` file
     ```zsh
@@ -142,7 +152,6 @@ pyenv global 3.7.7
 ## SSH access
 
 1. Install OpenSSH server
-
     ```bash
     ## Ubuntu
     sudo apt instal openssh-server
