@@ -69,6 +69,11 @@ If you prefer bash, you can skip this one.
 
     Follow the instructions in [zsh configuration](./zsh/README.md).
 
+## iTerm2
+    ```bash
+    ## MacOS
+    brew cask install iterm2
+    ```
 
 ## Python 3
 
@@ -79,8 +84,16 @@ wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
 
 ## MacOS
-brew install python3
+brew install pyenv
+pyenv install 3.7.7 # or any other Python version you like
+pyenv global 3.7.7
 ```
+- Add the following lines to `~/.zshrc` to run pyenv when starting terminal:
+    ```bash
+    if command -v pyenv 1>/dev/null 2>&1; then
+        eval "$(pyenv init -)"
+    fi
+    ```
 
 ## Virtualenv
 
